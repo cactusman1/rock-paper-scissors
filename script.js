@@ -15,10 +15,10 @@
             else  {
                 choice = 'scissors';
             }
+            console.log("Computer's choice: " + choice);
             return choice;
         }
-        let computerSelection = getComputerChoice();
-        console.log("Computer choice: " + computerSelection);
+        
 
         function getHumanChoice () {
             let humanChoice = prompt("CHOOSE!!! rock, paper or scissors?").toUpperCase();
@@ -33,11 +33,10 @@
             else{
                 choice = 'scissors';
             }
+
+            console.log("Your choice: " + choice);
             return choice;
         }
-
-        let humanSelection = getHumanChoice();
-        console.log("Your choice: " + humanSelection);
 
         function playRound (humanChoice, computerChoice){
 
@@ -66,12 +65,24 @@
             return localScopeFinalScore;
         }
 
-        let finalScore = playRound(humanSelection,computerSelection);
-        console.log(finalScore);
-
+        // let finalScore = playRound(humanSelection,computerSelection);
+        // console.log(finalScore);
+        //This function is buggy af. fix it the next time you work on this project.
         function playGame () {
-            
+            let scoreBoard;
+            scoreBoard = playRound(getHumanChoice(), getComputerChoice());
+            console.log(scoreBoard);
+            scoreBoard = playRound(getHumanChoice(), getComputerChoice());
+            console.log(scoreBoard);
+            scoreBoard = playRound(getHumanChoice(), getComputerChoice());
+            console.log(scoreBoard);
+            scoreBoard = playRound(getHumanChoice(), getComputerChoice());
+            console.log(scoreBoard);
+            scoreBoard = playRound(getHumanChoice(), getComputerChoice());
+            return scoreBoard
         }
+        let finalScore = playGame();
+        console.log("Final score: " + finalScore);
 
 
     
