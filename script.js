@@ -19,7 +19,7 @@
             return choice;
         }
         
-
+            //This function will take in the user's choice
         function getHumanChoice () {
             let humanChoice = prompt("CHOOSE!!! rock, paper or scissors?").toUpperCase();
             let choice;
@@ -37,7 +37,7 @@
             console.log("Your choice: " + choice);
             return choice;
         }
-
+        //This function simulates a single round.
         function playRound (humanChoice, computerChoice){
 
             if (humanChoice == "rock" && computerChoice == "paper"){
@@ -65,9 +65,8 @@
             return localScopeFinalScore;
         }
 
-        // let finalScore = playRound(humanSelection,computerSelection);
-        // console.log(finalScore);
-        //This function is buggy af. fix it the next time you work on this project.
+        // This function calls the playRound function 5 times which means
+        // the user gets to play 5 rounds
         function playGame () {
             let scoreBoard;
             scoreBoard = playRound(getHumanChoice(), getComputerChoice());
